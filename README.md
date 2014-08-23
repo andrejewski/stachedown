@@ -1,7 +1,7 @@
 Stachedown
 ==========
 
-Stachedown helps write Mustache templates in Markdown instead of HTML.
+Stachedown renders Mustache templates written in Markdown.
 
 ## Installation
 
@@ -41,21 +41,21 @@ stachedown.inject(template, data);
 
 ## Configuration
 
-Stachedown requires [mustache.js](https://github.com/janl/mustache.js) and [marked](https://github.com/chjj/marked). While it does not provided anything more than functions, Stachedown does expose the configuration options of its dependencies.
+Stachedown requires [mustache.js](https://github.com/janl/mustache.js) and [marked](https://github.com/chjj/marked). While it does not provided anything more than functions, Stachedown does expose its dependencies for their own configuration options.
 
 ```javascript
 var Stachedown = require("stachedown"),
 	Marked = Stachedown.Marked,
 	Mustache = Stachedown.Mustache;
 ```
-Marked options can also be passed directly to the Stachedown constructor and will be used for each render with that Stachedown instance. [See marked for more details.](https://github.com/chjj/marked)
+Marked options can also be passed directly to the Stachedown constructor and will be used for each render with that Stachedown instance. [See marked for more details.](https://github.com/chjj/marked#options-1)
 
 ```javascript
 var Stachedown = require("stachedown"),
 	stachedown = Stachedown({marked options});
 ```
 
-Since Marked can be configured to be asynchronous, Stachedown can determine whether marked is configured asynchrounsly and adapt to match an asynchronous call.
+Stachedown can determine whether marked is configured asynchronously and adapt to compliment an asynchronous call.
 
 ```javascript
 stachedown.render(template, data, function(error, html) {
@@ -66,7 +66,7 @@ stachedown.render(template, data, function(error, html) {
 
 ## Strict Templating
 
-Suppose a template is rendered with an Object literal as data using Mustache. Mustache ignores missing and undefined variables in templates.
+Suppose a template is rendered with an object literal as data using Mustache. Mustache ignores missing and undefined variables in templates.
 
 ```javascript
 Mustache.render('The {{important_thing}} must be visible.', {});
@@ -80,7 +80,7 @@ stachedown.renderStrict('The {{important_thing}} must be visible.', {});
 // throws Error
 ```
 
-While strict templating is not a direct goal of Stachedown, I thought the use case was good enough to include it within this module.
+While strict templating is not a direct goal of Stachedown, I thought the use case was good enough to include it within this module as an option.
 
 ## Contributing
 
