@@ -1,0 +1,35 @@
+{
+  "name": "stachedown",
+  "version": "0.0.1",
+  "description": "you got mustache in my markdown",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test-spec": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrejewski/stachedown.git"
+  },
+  "keywords": [
+    "template",
+    "markdown",
+    "mustache"
+  ],
+  "author": "Chris Andrejewski <christopher.andrejewski@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrejewski/stachedown/issues"
+  },
+  "homepage": "https://github.com/andrejewski/stachedown",
+  "dependencies": {
+    "marked": "^0.3.2",
+    "mustache": "^0.8.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
